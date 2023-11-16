@@ -1,8 +1,9 @@
-name: Build & Deploy
+name: Build other
 
 on:
   push:
     branches:
+      - '*'
       - '!main'
   pull_request:
 
