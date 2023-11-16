@@ -1,8 +1,11 @@
 FROM docker.io/kasmweb/ubuntu-jammy-desktop:%VER%-rolling
 
 USER root
-RUN apt update && apt install -y sudo curl jq wget build-essential python3 python3-pip wireguard openresolv snapd && sudo snap install phpstorm --classic
+RUN apt update && apt install -y sudo curl jq wget build-essential python3 python3-pip wireguard openresolv
 RUN echo "#1000 ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
+RUN wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.1.0.18144.tar.gz
+RUN sudo tar -xzf jetbrains-toolbox-1.17.7391.tar.gz -C /opt
+RUN chmod +x /opt/jetbrains-toolbox && RUN /opt/jetbrains-toolbox
 
 # https://hub.docker.com/r/rustlang/rust/dockerfile
 ENV RUSTUP_HOME=/usr/local/rustup \
