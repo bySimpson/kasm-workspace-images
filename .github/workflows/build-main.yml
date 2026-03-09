@@ -42,7 +42,7 @@ jobs:
           echo "IMAGENAME=${{ matrix.paths }}" | sed 's/\.\///g' | sed 's/\.[^.]*$//' >>${GITHUB_ENV}
           sed -i "s/%VER%/${{ matrix.version }}/" ${{ matrix.paths }}
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Log in to registry
