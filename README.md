@@ -5,7 +5,7 @@ Custom Kasm Workspace images with some extra tooling based on the [official imag
 Create a new Workspace and edit it. If you want to use for example Ubuntu Jammy Desktop then you should select the Jammy Desktop Workspace from the official Registry and then click "Edit".
 
 In the edit menu, Replace the Docker Image under container options. The Image name follows the following naming convention: `ghcr.io/bysimpson/kasm-workspace-{{Dockerfile-name}}:{{kasm-version}}`. So if you want to use the Image ubuntu-jammy-desktop with the 
-kasm version 1.15, then the image tag will be `ghcr.io/bysimpson/kasm-workspace-ubuntu-jammy-desktop:1.15.0`.
+kasm version 1.15, then the image tag will be `ghcr.io/bysimpson/kasm-workspace-ubuntu-jammy-desktop:1.19.0`.
 
 If you want to use Wireguard, you have to add the following to Docker Run Config Override:
 ```json
